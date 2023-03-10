@@ -40,19 +40,8 @@ function admin_page_load()
 
 function admin_page()
 {
-?>
-	<noscript>
-		<div class="no-js"><?php echo esc_html__('Warning: This options panel will not work properly without JavaScript, please enable it.', 'text-domain'); ?></div>
-	</noscript>
-	<style>
-		#ui-loading {
-			height: calc(100vh - 100px);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	</style>
-	<div id="ui-loading"><?php echo esc_html__('Loading…', 'text-domain'); ?></div>
-	<div id="app"></div>
-<?php
+	echo <<<HTML
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="app"></div>
+	HTML;
 }
