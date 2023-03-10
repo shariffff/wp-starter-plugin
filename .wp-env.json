@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "."
+  ],
+  "config": {
+    "SCRIPT_DEBUG": true
+  }
+}
