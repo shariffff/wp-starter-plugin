@@ -4,9 +4,9 @@
   "private": false,
   "homepage": "https://github.com/shariffff/wp-starter-plugin",
   "scripts": {
-    "build": "wp-scripts build --config webpack.config.mjs",
-    "start": "wp-scripts start --config webpack.config.mjs",
-    "hot": "wp-scripts start --config webpack.config.mjs --hot",
+    "build": "wp-scripts build src/settings.js --output-path=build",
+    "start": "wp-scripts start src/settings.js --output-path=build",
+    "hot": "wp-scripts start src/settings.js --output-path=build --hot --allowed-hosts all",
     "env": "wp-env"
   },
   "dependencies": {
@@ -14,11 +14,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@wordpress/components": "^23.2.0",
-    "@wordpress/element": "^5.2.0",
     "@wordpress/env": "^5.13.0",
-    "@wordpress/scripts": "25.5.1",
-    "deep-clone": "^3.0.3"
+    "@wordpress/scripts": "25.5.1"
   },
   "browserslist": "last 2 versions, Firefox ESR, not dead, not op_mini all, not ie <= 11"
 }
