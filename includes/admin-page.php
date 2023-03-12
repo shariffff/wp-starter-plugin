@@ -11,7 +11,7 @@ function admin_menu()
 		'manage_options',
 		'wp-starter',
 		'admin_page',
-		'dashicons-games',
+		'dashicons-lightbulb',
 		null
 	);
 
@@ -26,7 +26,7 @@ function admin_menu()
  */
 function prefix_wp_enqueue_scripts()
 {
-	enqueue_scripts_from_asset_file('settings', WP_STARTER_PLUGIN_PLUGIN_FILE);
+	enqueue_scripts_from_asset_file('index', WP_STARTER_PLUGIN_PLUGIN_FILE);
 }
 
 function admin_page_load()

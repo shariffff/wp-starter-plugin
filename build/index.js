@@ -620,18 +620,17 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/settings.js":
-/*!*************************!*\
-  !*** ./src/settings.js ***!
-  \*************************/
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
@@ -640,7 +639,8 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 
-(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_2__["default"]), document.getElementById('app'));
+const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('app'));
+root.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -6643,12 +6643,45 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1678519965363
+      // 1678626641270
       var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
     }
   
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/client.js":
+/*!******************************************!*\
+  !*** ./node_modules/react-dom/client.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var m = __webpack_require__(/*! react-dom */ "react-dom");
+if (false) {} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+  exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
+
 
 /***/ }),
 
@@ -10903,12 +10936,12 @@ module.exports = getWDSMetadata;
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	(() => {
-/******/ 		__webpack_require__.hmrF = () => ("settings." + __webpack_require__.h() + ".hot-update.json");
+/******/ 		__webpack_require__.hmrF = () => ("index." + __webpack_require__.h() + ".hot-update.json");
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("90755013a0289288a9fe")
+/******/ 		__webpack_require__.h = () => ("7d5889ec1fd8b190d6fa")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -11559,7 +11592,7 @@ module.exports = getWDSMetadata;
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
-/******/ 			"settings": 0
+/******/ 			"index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -12075,8 +12108,8 @@ module.exports = getWDSMetadata;
 /******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=localhost&port=8887&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true");
 /******/ 	__webpack_require__("./node_modules/webpack/hot/dev-server.js");
 /******/ 	__webpack_require__("./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ErrorOverlayEntry.js?sockHost=localhost&sockPort=8887&sockProtocol=http");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/settings.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=index.js.map

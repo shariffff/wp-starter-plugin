@@ -2,13 +2,12 @@
 
 /**
  * Plugin Name:       WordPress Starter Plugin
- * Plugin URI:        #
+ * Plugin URI:        https://github.com/shariffff/wp-starter-plugin
  * Description:       Starter Plugin using WP packages.
  * Text Domain:       text-domain
  * Domain Path:       /languages
- *
- * Author:            Your Name here
- * Author URI:       #
+ * Author:            Sharif Mohammad Eunus
+ * Author URI:       https://github.com/shariffff/wp-starter-plugin
  * Version:           0.0.1
  * Requires at least: 5.8
  * Tested up to:      6.1.1

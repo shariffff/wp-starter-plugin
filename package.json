@@ -4,9 +4,10 @@
   "private": false,
   "homepage": "https://github.com/shariffff/wp-starter-plugin",
   "scripts": {
-    "build": "wp-scripts build src/settings.js --output-path=build",
-    "start": "wp-scripts start src/settings.js --output-path=build",
-    "hot": "wp-scripts start src/settings.js --output-path=build --hot --allowed-hosts all",
+    "start": "wp-scripts start src/index.js --output-path=build",
+    "hot": "wp-scripts start src/index.js --output-path=build --hot --allowed-hosts all",
+    "build": "wp-scripts build src/index.js --output-path=build",
+    "format": "wp-scripts format ./src",
     "env": "wp-env"
   },
   "dependencies": {

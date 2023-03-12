@@ -8,16 +8,16 @@ function enqueue_scripts_from_asset_file($name, $plugin_file)
 		$script_asset = include $script_asset_path;
 		$script_dependencies = $script_asset['dependencies'] ?? [];
 
-		// if( in_array( 'wp-media-utils', $script_dependencies, true )) {
-		// 	wp_enqueue_media();
-		// }
-
-		if (in_array('wp-react-refresh-runtime', $script_asset['dependencies'], true) && !constant('SCRIPT_DEBUG')) {
-			wp_die(esc_html__('SCRIPT_DEBUG should be true to use HMR.
-			`WP config set --raw SCRIPT_DEBUG true` ', 'text-domain'));
+		if (in_array('wp-media-utils', $script_dependencies, true)) {
+			wp_enqueue_media();
 		}
 
-		wp_enqueue_script("wp-modern-settings-page-boilerplate-$name", plugins_url("build/$name.js", $plugin_file), $script_dependencies, $script_asset['version'], true);
+		if (in_array('wp-react-refresh-runtime', $script_asset['dependencies'], true) && !constant('SCRIPT_DEBUG')) {
+			wp_die(esc_html__('SCRIPT_DEBUG should be `true` to use Hot Module Replacement.
+			`define( "SCRIPT_DEBUG", true );` ', 'text-domain'));
+		}
+
+		wp_enqueue_script("wordpress-starter-plugin-$name", plugins_url("build/$name.js", $plugin_file), $script_dependencies, $script_asset['version'], true);
 
 		$style_dependencies = [];
 
@@ -26,6 +26,6 @@ function enqueue_scripts_from_asset_file($name, $plugin_file)
 			$style_dependencies[] = 'wp-components';
 		}
 
-		wp_enqueue_style("wp-modern-settings-page-boilerplate-$name", plugins_url("build/$name.css", $plugin_file), $style_dependencies, $script_asset['version'], 'all');
+		wp_enqueue_style("wordpress-starter-plugin-$name", plugins_url("build/$name.css", $plugin_file), $style_dependencies, $script_asset['version'], 'all');
 	}
 }
