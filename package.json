@@ -10,10 +10,7 @@
     "format": "wp-scripts format ./src",
     "env": "wp-env"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@wordpress/env": "^5.13.0",
     "@wordpress/scripts": "25.5.1"
